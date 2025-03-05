@@ -1,0 +1,150 @@
+/* =============================================
+/* Hexadecimal Colors
+/* ============================================= */
+
+/* 3-digit hex */
+#hex-3 {
+	color: #fff;
+}
+
+/* 4-digit hex (with alpha) */
+#hex-4 {
+	color: #ffff;
+}
+
+/* 6-digit hex */
+#hex-6 {
+	color: #ffffff;
+}
+
+/* 8-digit hex (with alpha) */
+#hex-8 {
+	color: #ffffffff;
+}
+
+/* =============================================
+/* Functional Notation Colors
+/* ============================================= */
+
+/* RGB */
+#rgb {
+	color: rgb(255, 0, 0);
+}
+
+/* RGB with percentage values */
+#rgb-percent {
+	color: rgb(100%, 0%, 0%);
+}
+
+/* RGBA */
+#rgba {
+	color: rgba(255, 0, 0, 0.5);
+}
+
+/* HSL */
+#hsl {
+	color: hsl(120, 100%, 50%);
+}
+
+/* HSLA */
+#hsla {
+	color: hsla(120, 100%, 50%, 0.5);
+}
+
+/* HWB */
+#hwb {
+	color: hwb(120, 50%, 30%);
+}
+
+/* LAB */
+#lab {
+	color: lab(75, 20, -30);
+}
+
+/* LCH */
+#lch {
+	color: lch(75, 30, 120);
+}
+
+/* OKLAB */
+#oklab {
+	color: oklab(0.5, 0.2, 0.1);
+}
+
+/* OKLCH */
+#oklch {
+	color: oklch(0.5, 0.2, 120);
+}
+
+/* =============================================
+/* Named Colors
+/* ============================================= */
+
+/* Basic named Colors */
+#named-basic {
+	color: red;
+	background: blue;
+	border-color: transparent;
+}
+
+/* Extended named Colors */
+#named-extended {
+	color: rebeccapurple;
+	background: aliceblue;
+	border-color: darkgoldenrod;
+}
+
+/* =============================================
+/* CSS Variables */
+/* ============================================= */
+
+/* CSS variables with Colors */
+:root {
+	--primary-color: #ff5733;
+	--secondary-color: rgba(255, 0, 0, 0.5);
+	--accent-color: hsl(120, 100%, 50%);
+}
+
+/* CSS variables as values */
+#css-variables {
+	color: var(--primary-color);
+	background: var(--secondary-color);
+	border-color: var(--accent-color);
+}
+
+/* =============================================
+/* Edge Cases
+/* ============================================= */
+
+/*
+* Should NOT be captured
+*/
+
+/* Color in a string */
+#color-in-string {
+	content: 'This is a color: #FF5733';
+}
+
+/* Color in a URL */
+#color-in-url {
+	background-image: url('#FF5733');
+}
+
+/* Color in a font name */
+#color-in-font {
+	font-family: 'Arial #FF5733';
+}
+
+/* Color in a content property */
+#color-in-content {
+	content: '#FF5733 is a color';
+}
+
+/**
+* TODO
+*
+* 1. Color without semicolon (should be captured)
+* #color-no-semicolon { color: #FF5733 }
+*
+* 2. Color in a comment (should not be captured)
+**/
