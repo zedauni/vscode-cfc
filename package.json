@@ -1,0 +1,256 @@
+{
+  "name": "vscode-cfc",
+  "displayName": "%cfc.pkg.displayName%",
+  "description": "%cfc.pkg.description%",
+  "author": "Aurèle ZANNOU TCHOKO <11563693+zedauni@users.noreply.github.com>",
+  "publisher": "zedauni",
+  "version": "0.1.0",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "icon": "resources/icons/icon.png",
+  "galleryBanner": {
+    "color": "#0059F9",
+    "theme": "dark"
+  },
+  "pricing": "Free",
+  "activationEvents": [],
+  "badges": [
+    {
+      "url": "https://vsmarketplacebadges.dev/version-short/zedauni.vscode-cfc.png",
+      "href": "https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc",
+      "description": "Version VSCode Marketplace"
+    },
+    {
+      "url": "https://vsmarketplacebadges.dev/installs-short/zedauni.vscode-cfc.png",
+      "href": "https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc",
+      "description": "Install from VSCode Marketplace"
+    },
+    {
+      "url": "https://img.shields.io/github/issues/zedauni/vscode-cfc.svg",
+      "href": "https://github.com/zedauni/vscode-cfc/issues",
+      "description": "GitHub issues"
+    },
+    {
+      "url": "https://img.shields.io/badge/license-MIT-blue.svg",
+      "href": "LICENSE-MIT",
+      "description": "license"
+    }
+  ],
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "main": "./out/extension.js",
+  "l10n": "./l10n",
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "npm run check-types && npm run lint && node esbuild.js",
+    "watch": "npm run watch:tsc && npm run watch:esbuild",
+    "watch:esbuild": "node esbuild.js --watch",
+    "watch:tsc": "tsc --noEmit --watch --project tsconfig.json",
+    "package": "npm run check-types && npm run lint && node esbuild.js --production",
+    "compile-tests": "tsc -p . --outDir out",
+    "check-types": "tsc --noEmit",
+    "lint": "eslint",
+    "pretest": "npm run compile",
+    "test": "node ./out/test/runTest.js"
+  },
+  "dependencies": {
+    "@vscode/l10n": "^0.0.18",
+    "colorjs.io": "^0.5.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@stylistic/eslint-plugin": "^4.1.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.5",
+    "@types/vscode": "^1.97.0",
+    "@vscode/l10n-dev": "^0.0.35",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "esbuild": "^0.25.0",
+    "eslint": "^9.21.0",
+    "mocha": "^11.1.0",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0"
+  },
+  "license": "%cfc.pkg.licenseText%",
+  "bugs": {
+    "url": "https://github.com/zedauni/vscode-cfc/issues",
+    "email": "11563693+zedauni@users.noreply.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zedauni/vscode-cfc.git"
+  },
+  "homepage": "https://github.com/zedauni/vscode-cfc/blob/main/README.md",
+  "keywords": [
+    "OKLCH OKLAB",
+    "CSS Color Preview",
+    "Color Conversion",
+    "Conversion de couleur",
+    "Colors formats"
+  ],
+  "preview": false,
+  "contributes": {
+    "configuration": {
+      "title": "%cfc.pkg.displayName%",
+      "properties": {
+        "cfc.precision": {
+          "type": "number",
+          "default": 4,
+          "title": "%cfc.pkg.configs.precision.title%",
+          "description": "%cfc.pkg.configs.precision.description%",
+          "minimum": 0,
+          "maximum": 20
+        },
+        "cfc.defaultFormat": {
+          "type": "string",
+          "default": "OKLCH",
+          "enum": [
+            "HEX",
+            "HSL",
+            "HSLA",
+            "HWB",
+            "LAB",
+            "LCH",
+            "RGB",
+            "RGBA",
+            "OKLCH",
+            "OKLAB"
+          ],
+          "title": "%cfc.pkg.configs.defaultFormat.title%",
+          "description": "%cfc.pkg.configs.defaultFormat.description%"
+        },
+        "cfc.forceAlpha": {
+          "type": "boolean",
+          "default": false,
+          "title": "%cfc.pkg.configs.forceAlpha.title%",
+          "description": "%cfc.pkg.configs.forceAlpha.description%"
+        },
+        "cfc.showModernColorPreview": {
+          "type": "boolean",
+          "default": true,
+          "title": "%cfc.pkg.configs.showModernColorPreview.title%",
+          "description": "%cfc.pkg.configs.showModernColorPreview.description%"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "cfc.convertColor",
+        "title": "%cfc.pkg.commands.convertColor.title%",
+        "description": "%cfc.pkg.commands.convertColor.description%",
+        "category": "1_modification",
+        "icon": "resources/icons/icon_secondary.svg"
+      },
+      {
+        "command": "cfc.clearHistory",
+        "category": "%cfc.pkg.categories.history.title%",
+        "title": "%cfc.pkg.commands.clearHistory.description%",
+        "description": "%cfc.pkg.commands.clearHistory.description%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "cfc.refreshHistory",
+        "category": "%cfc.pkg.categories.history.title%",
+        "title": "%cfc.pkg.commands.refreshHistory.title%",
+        "description": "%cfc.pkg.commands.refreshHistory.description%",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "cfc.addColorToFavorites",
+        "category": "%cfc.pkg.categories.favorites.title%",
+        "title": "%cfc.pkg.commands.addToFavorites.title%",
+        "shortTitle": "%cfc.pkg.commands.addToFavorites.shortTitle%",
+        "description": "%cfc.pkg.commands.addToFavorites.description%",
+        "icon": "$(add)"
+      },
+      {
+        "command": "cfc.clearFavorites",
+        "category": "%cfc.pkg.categories.favorites.title%",
+        "title": "%cfc.pkg.commands.clearFavorites.title%",
+        "description": "%cfc.pkg.commands.clearFavorites.description%",
+        "icon": "$(clear-all)"
+      },
+      {
+        "command": "cfc.refreshFavorites",
+        "category": "%cfc.pkg.categories.favorites.title%",
+        "title": "%cfc.pkg.commands.refreshFavorites.title%",
+        "description": "%cfc.pkg.commands.refreshFavorites.description%",
+        "icon": "$(refresh)"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "cfc.convertColor",
+        "key": "ctrl+alt+0",
+        "mac": "cmd+alt+0",
+        "when": "editorTextFocus && (editorLangId == css || editorLangId == scss || editorLangId == less || editorLangId == javascript || editorLangId == typescript || editorLangId == html || editorLangId == twig || editorLangId == vue || editorLangId == tsx)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "cfc.convertColor",
+          "group": "navigation",
+          "when": "editorLangId == css || editorLangId == scss || editorLangId == less || editorLangId == javascript || editorLangId == typescript || editorLangId == html || editorLangId == twig || editorLangId == vue || editorLangId == tsx"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "cfc.clearHistory",
+          "group": "navigation",
+          "when": "view == cfc.colorsHistoryView"
+        },
+        {
+          "command": "cfc.refreshHistory",
+          "group": "navigation",
+          "when": "view == cfc.colorsHistoryView"
+        },
+        {
+          "command": "cfc.clearFavorites",
+          "group": "navigation",
+          "when": "view == cfc.colorsFavoritesView"
+        },
+        {
+          "command": "cfc.refreshFavorites",
+          "group": "navigation",
+          "when": "view == cfc.colorsFavoritesView"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "cfcColorsSidebarContainer",
+          "title": "%cfc.pkg.activityBar.colors.title%",
+          "icon": "resources/icons/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "cfcColorsSidebarContainer": [
+        {
+          "type": "webview",
+          "id": "cfc.colorsHistoryView",
+          "name": "%cfc.pkg.view.colorsHistoryView.name%",
+          "icon": "resources/icons/icon_secondary.png",
+          "contextualTitle": "%cfc.pkg.activityBar.colors.title%"
+        },
+        {
+          "type": "webview",
+          "id": "cfc.colorsFavoritesView",
+          "name": "%cfc.pkg.view.colorsFavoritesView.name%",
+          "icon": "resources/icons/icon_secondary.png",
+          "contextualTitle": "%cfc.pkg.activityBar.colors.title%"
+        }
+      ]
+    }
+  }
+}
