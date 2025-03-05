@@ -1,0 +1,33 @@
+{
+  "cfc.error.invalidColorFormat/{0} is the invalid color format": {
+    "message": "Format de couleur invalide. Impossible de traiter {0} comme étant une couleur.",
+    "comment": [
+      "{0} is the invalid color format"
+    ]
+  },
+  "cfc.prompt.colorInputBoxPlaceholder": "Entrez une couleur (ex: #3d5a80, rgb(255, 200, 100))",
+  "cfc.prompt.colorFormatQuickPickPlaceholder": "Choisissez un format à copier",
+  "cfc.message.copiedToClipboard/{0} is the picked color format, ex: oklch(22.38% 0.0547 252.7)": {
+    "message": "Copié {0}",
+    "comment": [
+      "{0} is the picked color format, ex: oklch(22.38% 0.0547 252.7)"
+    ]
+  },
+  "cfc.error.invalidColor/{0} is the invalid color": {
+    "message": "Couleur invalide : {0}",
+    "comment": [
+      "{0} is the invalid color"
+    ]
+  },
+  "cfc.warning.invalidColor/{0} is the invalid color": {
+    "message": "Couleur invalide : {0}",
+    "comment": [
+      "{0} is the invalid color"
+    ]
+  },
+  "cfc.prompt.clearHistoryConfirmationRequest": "Êtes-vous certain de vouloir effacer l'historique des couleurs converties ?",
+  "cfc.prompt.clearFavoritesConfirmationRequest": "Êtes-vous certain de vouloir effacer toutes les couleurs favorites ?",
+  "cfc.webview.historyWebviewViewTitle": "Historique des couleurs",
+  "cfc.webview.addColor": "Ajouter la couleur",
+  "cfc.webview.favoritesWebviewViewTitle": "Couleurs favorites"
+}

@@ -1,0 +1,33 @@
+{
+  "cfc.error.invalidColorFormat/{0} is the invalid color format": {
+    "message": "cfc.error.invalidColorFormat",
+    "comment": [
+      "{0} is the invalid color format"
+    ]
+  },
+  "cfc.prompt.colorInputBoxPlaceholder": "cfc.prompt.colorInputBoxPlaceholder",
+  "cfc.prompt.colorFormatQuickPickPlaceholder": "cfc.prompt.colorFormatQuickPickPlaceholder",
+  "cfc.message.copiedToClipboard/{0} is the picked color format, ex: oklch(22.38% 0.0547 252.7)": {
+    "message": "cfc.message.copiedToClipboard",
+    "comment": [
+      "{0} is the picked color format, ex: oklch(22.38% 0.0547 252.7)"
+    ]
+  },
+  "cfc.error.invalidColor/{0} is the invalid color": {
+    "message": "cfc.error.invalidColor",
+    "comment": [
+      "{0} is the invalid color"
+    ]
+  },
+  "cfc.warning.invalidColor/{0} is the invalid color": {
+    "message": "cfc.warning.invalidColor",
+    "comment": [
+      "{0} is the invalid color"
+    ]
+  },
+  "cfc.prompt.clearHistoryConfirmationRequest": "cfc.prompt.clearHistoryConfirmationRequest",
+  "cfc.prompt.clearFavoritesConfirmationRequest": "cfc.prompt.clearFavoritesConfirmationRequest",
+  "cfc.webview.historyWebviewViewTitle": "cfc.webview.historyWebviewViewTitle",
+  "cfc.webview.addColor": "cfc.webview.addColor",
+  "cfc.webview.favoritesWebviewViewTitle": "cfc.webview.favoritesWebviewViewTitle"
+}
