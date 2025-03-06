@@ -2,9 +2,9 @@
   "name": "vscode-cfc",
   "displayName": "%cfc.pkg.displayName%",
   "description": "%cfc.pkg.description%",
-  "author": "Aurèle ZANNOU TCHOKO <11563693+zedauni@users.noreply.github.com>",
+  "author": "Aurèle ZANNOU TCHOKO <zedauni@mail.com>",
   "publisher": "zedauni",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "extensionKind": [
     "ui",
     "workspace"
@@ -13,22 +13,23 @@
     "Other"
   ],
   "icon": "resources/icons/icon.png",
-  "galleryBanner": {
-    "color": "#0059F9",
-    "theme": "dark"
-  },
   "pricing": "Free",
   "activationEvents": [],
   "badges": [
     {
-      "url": "https://vsmarketplacebadges.dev/version-short/zedauni.vscode-cfc.png",
+      "url": "https://img.shields.io/visual-studio-marketplace/v/zedauni.vscode-cfc",
       "href": "https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc",
-      "description": "Version VSCode Marketplace"
+      "description": "Version from VSCode Marketplace"
     },
     {
-      "url": "https://vsmarketplacebadges.dev/installs-short/zedauni.vscode-cfc.png",
+      "url": "https://img.shields.io/visual-studio-marketplace/i/zedauni.vscode-cfc",
       "href": "https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc",
       "description": "Install from VSCode Marketplace"
+    },
+    {
+      "url": "https://img.shields.io/visual-studio-marketplace/stars/zedauni.vscode-cfc",
+      "href": "https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc",
+      "description": "VSCode Marketplace Rating"
     },
     {
       "url": "https://img.shields.io/github/issues/zedauni/vscode-cfc.svg",
@@ -82,7 +83,7 @@
   "license": "%cfc.pkg.licenseText%",
   "bugs": {
     "url": "https://github.com/zedauni/vscode-cfc/issues",
-    "email": "11563693+zedauni@users.noreply.github.com"
+    "email": "zedauni@mail.com"
   },
   "repository": {
     "type": "git",

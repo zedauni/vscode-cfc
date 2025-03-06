@@ -28,37 +28,6 @@ export interface ConvertColorFormatsOptions {
 }
 
 /**
- * Regex to detect CSS color values in various formats:
- *
- * Hexadecimal:
- *    - 3 digits: #RGB (e.g., #eee)
- *    - 4 digits: #RGBA (e.g., #eee9)
- *    - 6 digits: #RRGGBB (e.g.,#eeeeee)
- *    - 8 digits: #RRGGBBAA (e.g.,#eeeeee59)
- *
- * Functional notations:
- *    - RGB: rgb(R, G, B) (e.g., rgb(238, 238, 238), rgb(93.33% 93.33% 93.33%))
- *    - RGBA: rgba(R, G, B, A) (e.g., rgba(238, 238, 238, 0.349), rgba(93.33%, 93.33%, 93.33%, 0.349))
- *    - HSL: hsl(H, S%, L%) (e.g., hsl(0, 0%, 93%), hsl(none, 0%, 92.94%))
- *    - HSLA: hsla(H, S%, L%, A) (e.g., hsla(0, 0%, 93%, 0.349), hsla(none, 0%, 92.94%, 0.349))
- *    - HWB: hwb(H, W%, B%) (e.g., hwb(0 93% 7%))
- *    - LAB: lab(L, A, B) (e.g., lab(93.75 0 0), lab(93.75 0 0 / 0.349))
- *    - LCH: lch(L, C, H) (e.g., lch(93.75 0 none), lch(93.75 0 none / 0.349))
- *    - OKLAB: oklab(L, A, B) (e.g., oklab(94.61% 0 0), oklab(94.61% 0 0 / 0.349))
- *    - OKLCH: oklch(L, C, H) (e.g., oklch(94.61% 0 none), oklch(94.61% 0 none / 0.349))
- *
- * Named colors:
- *    - CSS basic named colors (https://www.w3.org/wiki/CSS/Properties/color/keywords#Basic_Colors) + transparent and orange
- *    - aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, transparent, white, yellow
- *
- * The regex is case-insensitive and supports global matching.
- *
- * TODO: Add support for CSS color format function: color()
- */
-export const colorRegex =
-	/(?<!\w)(:\s*)?(#([0-9A-Fa-f]{3,4}){1,2}\b|(rgb|hsl|hwb|lab|lch|oklab|oklch)a?\s*\([^)]+\)|\b(aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|transparent|white|yellow))(?=\s*;|\s*$)/gi;
-
-/**
  * Validate if a color string is a valid CSS color in any of the following formats:
  * LAB, LCH, OKLAB, OKLCH
  * 
