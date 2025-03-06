@@ -38,8 +38,8 @@
     },
     {
       "url": "https://img.shields.io/badge/license-MIT-blue.svg",
-      "href": "LICENSE-MIT",
-      "description": "license"
+      "href": "https://github.com/zedauni/vscode-cfc/blob/main/LICENSE.txt",
+      "description": "License"
     }
   ],
   "engines": {

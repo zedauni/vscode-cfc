@@ -1,8 +1,9 @@
 # CFC: Color Formats Converter
 
-![Version](https://vsmarketplacebadges.dev/version-short/zedauni.vscode-cfc.png)
-![Issues](https://img.shields.io/github/issues/zedauni/vscode-cfc.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Version](https://img.shields.io/visual-studio-marketplace/v/zedauni.vscode-cfc)](https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc)
+[![VSCode Marketplace Rating](https://img.shields.io/visual-studio-marketplace/stars/zedauni.vscode-cfc)](https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc)
+[![Issues](https://img.shields.io/github/issues/zedauni/vscode-cfc.svg)](https://github.com/zedauni/vscode-cfc/issues)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zedauni/vscode-cfc/blob/main/LICENSE.txt)
 
 **CFC: Color Formats Converter** is an easy-to-use VS Code extension that lets you quickly and easily convert colors between different formats. It supports modern color spaces like **OKLCH** and **OKLAB**, as well as traditional formats like **HEX**, **RGB**, **HSL**, and **HWB**. Whether you're a web developer, designer, or digital artist, this tool will make your workflow easier and ensure accurate color transformations.
 
