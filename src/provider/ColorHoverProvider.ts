@@ -1,5 +1,6 @@
 import { HoverProvider, TextDocument, Position, MarkdownString, Hover } from 'vscode';
-import { colorRegex, getConvertedColors } from '../utils';
+import { getConvertedColors } from '../utils';
+import { colorRegex } from '../constants';
 
 export class ColorHoverProvider implements HoverProvider {
 	provideHover(document: TextDocument, position: Position) {

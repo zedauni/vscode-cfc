@@ -1,8 +1,8 @@
 import { env, l10n, window } from 'vscode';
 import { ViewsProvider } from '../provider/ViewsProvider';
 import { Store } from '../Store';
-import { colorRegex, getConvertedColor, getConvertedColors } from '../utils';
-import { ColorConversionError, ExtensionConfigs } from '../constants';
+import { getConvertedColor, getConvertedColors } from '../utils';
+import { ColorConversionError, colorRegex, ExtensionConfigs } from '../constants';
 
 export async function convertColorCommand(
 	configs: ExtensionConfigs,
