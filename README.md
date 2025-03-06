@@ -1,7 +1,7 @@
 # CFC: Color Formats Converter
 
-![Version](https://vsmarketplacebadges.dev/version-short/zedauni.color-format-converter.png)
-![Issues](https://img.shields.io/github/issues/zedauni/vscode-color-format-converter.svg)
+![Version](https://vsmarketplacebadges.dev/version-short/zedauni.vscode-cfc.png)
+![Issues](https://img.shields.io/github/issues/zedauni/vscode-cfc.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 **CFC: Color Formats Converter** is an easy-to-use VS Code extension that lets you quickly and easily convert colors between different formats. It supports modern color spaces like **OKLCH** and **OKLAB**, as well as traditional formats like **HEX**, **RGB**, **HSL**, and **HWB**. Whether you're a web developer, designer, or digital artist, this tool will make your workflow easier and ensure accurate color transformations.
@@ -129,11 +129,11 @@ This extension supports all popular color formats, including those not listed he
 
 ### SUPPORTED FORMATS BY OTHER FEATURES
 
-- **On-the-fly hover color conversion** feature support this formats and [CSS basic named colors](https://www.w3.org/wiki/CSS/Properties/color/keywords#Basic_Colors) + transparent + orange (aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, transparent, white, yellow). Support for extended named colors (e.g., aliceblue, lightgreen, etc.) will be added in next versions. [Refer to the REGEX](https://github.com/zedauni/vscode-color-format-converter).
+- **On-the-fly hover color conversion** feature support this formats and [CSS basic named colors](https://www.w3.org/wiki/CSS/Properties/color/keywords#Basic_Colors) + transparent + orange (aqua, black, blue, fuchsia, gray, green, lime, maroon, navy, olive, orange, purple, red, silver, teal, transparent, white, yellow). Support for extended named colors (e.g., aliceblue, lightgreen, etc.) will be added in next versions. [Refer to the REGEX](https://github.com/zedauni/vscode-cfc/blob/main/src/constants.ts#L93).
 
 - **CFC Convert color command** support this formats and all other valid formats.
 
-- **OKLCH, OKLAB, LCH and LAB colors previews** are available only for OKLCH, OKLAB, LCH and LAB formats since this feature is not natively provided by VS Code for all other popular formats. [Refer to the REGEX](https://github.com/zedauni/vscode-color-format-converter).
+- **OKLCH, OKLAB, LCH and LAB colors previews** are available only for OKLCH, OKLAB, LCH and LAB formats since this feature is not natively provided by VS Code for all other popular formats. [Refer to the REGEX](https://github.com/zedauni/vscode-cfc/blob/main/src/utils.ts#L363).
 
 ---
 
@@ -143,8 +143,8 @@ We welcome contributions! If you'd like to improve **CFC: Color Formats Converte
 
 1. Fork the repository.
    ```sh
-   git clone https://github.com/zedauni/vscode-color-format-converter.git
-   cd vscode-color-format-converter
+   git clone https://github.com/zedauni/vscode-cfc.git
+   cd vscode-cfc
    ```
 2. Create a new branch for your feature or bugfix.
 3. Submit a pull request with a detailed description of your changes.
@@ -159,7 +159,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE.tx
 
 ## 🤝 Support
 
-If you encounter any issues or have suggestions for new features, please [open an issue](https://github.com/zedauni/vscode-color-format-converter/issues) on GitHub or leave a review on the [VS Code Marketplace Q & A](https://marketplace.visualstudio.com/items?itemName=zedauni.color-format-converter&ssr=false#qna).
+If you encounter any issues or have suggestions for new features, please [open an issue](https://github.com/zedauni/vscode-cfc/issues) on GitHub or leave a review on the [VS Code Marketplace Q & A](https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc&ssr=false#qna).
 
 ---
 
@@ -171,4 +171,4 @@ If you encounter any issues or have suggestions for new features, please [open a
 
 ---
 
-🫶 Enjoy using **CFC: Color Formats Converter**! If you find it helpful, consider giving it a ⭐ on [GitHub](https://github.com/zedauni/vscode-color-format-converter) or leaving a review on the [VS Code Marketplace Rating and Review](https://marketplace.visualstudio.com/items?itemName=zedauni.color-format-converter&ssr=false#review-details).
+🫶 Enjoy using **CFC: Color Formats Converter**! If you find it helpful, consider giving it a ⭐ on [GitHub](https://github.com/zedauni/vscode-cfc) or leaving a review on the [VS Code Marketplace Rating and Review](https://marketplace.visualstudio.com/items?itemName=zedauni.vscode-cfc&ssr=false#review-details).
